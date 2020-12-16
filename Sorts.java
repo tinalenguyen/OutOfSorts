@@ -3,5 +3,19 @@ public class Sorts{
   *Upon completion, the elements of the array will be in increasing order.
   *@param data  the elements to be sorted.
   */
-  public static void bubbleSort(int[] data){  }
+  public static void bubbleSort(int[] data){
+    int temp = 0 ;
+//      for (int i = 0 ; i < data.length -1; i++){
+
+          for (int j = 1 ; j < 2 ; j++){
+            if (data[j-1] > data[j] ){
+              //larger
+              temp = data[j-1];
+              data[j-1] = data[j] ;
+              data[j] = temp ;
+            }
+
+          }
+//      }
+  }
 }
