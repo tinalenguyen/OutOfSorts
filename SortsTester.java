@@ -38,5 +38,9 @@ public class SortsTester{
       int[] test6 = new int[]{0,0,5,1};
       Sorts.bubbleSort(test6);
       System.out.println(Arrays.toString(test6));
+
+      int[] test7 = new int[]{};
+      Sorts.bubbleSort(test7);
+      System.out.println(Arrays.toString(test7));
   }
 }
