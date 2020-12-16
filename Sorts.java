@@ -5,9 +5,9 @@ public class Sorts{
   */
   public static void bubbleSort(int[] data){
     int temp = 0 ;
-//      for (int i = 0 ; i < data.length -1; i++){
+     for (int i = 0 ; i < data.length -1; i++){
 
-          for (int j = 1 ; j < 2 ; j++){
+          for (int j = 1 ; j < i ; j++){
             if (data[j-1] > data[j] ){
               //larger
               temp = data[j-1];
@@ -16,6 +16,6 @@ public class Sorts{
             }
 
           }
-//      }
+      }
   }
 }
