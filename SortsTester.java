@@ -16,9 +16,9 @@ public class SortsTester{
       Sorts.bubbleSort(test3);
       System.out.println(Arrays.toString(test3));
 
-      int[] test4 = new int[6];
+      int[] test4 = new int[10];
       Random rng = new Random();
-      for(int i =  0; i < 6; i++ ){
+      for(int i =  0; i < 10; i++ ){
         test4[i] = (rng.nextInt() % 1000);
       }
       Sorts.bubbleSort(test4);
@@ -26,16 +26,16 @@ public class SortsTester{
 
 
       //specified seed can be used to reproduce sequences
-      int[] test5 = new int[6];
+      int[] test5 = new int[7];
       Random rando = new Random();
       rando = new Random(201);//seed of 100 is stored.
-      for(int i =  0; i < 6; i++ ){
+      for(int i =  0; i < 7; i++ ){
         test5[i] = (rando.nextInt() % 100);
       }
       Sorts.bubbleSort(test5);
       System.out.println("Specified seed test: " + Arrays.toString(test5));
 
-      int[] test6 = new int[]{0,0,5,3,5,2};
+      int[] test6 = new int[]{0,0,5,1};
       Sorts.bubbleSort(test6);
       System.out.println(Arrays.toString(test6));
   }
