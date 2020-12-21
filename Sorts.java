@@ -36,21 +36,24 @@ public class Sorts{
   public static void insertionSort(int[] data){
     int saver = 0;
 
-    for (int i = 1 ; i < data.length ; i++){
+    for (int i = 1 ; i < data.length; ){
 
       if (data[i] < data[i-1]) {
+        saver = data[i];
+      for (int j = i-1 ; j >= 0 ; j--){
 
-      for (int j = i-1 ; j > 0 ; j--){
-
-          if (data[i] < data[j]){
-            if ((j >= 1 && data[i] > data[j-1])||(j == 0)){
-
-            data[j] = data[i];
+          if (saver < data[j]){
+            if ((j >= 1 && saver > data[j-1])||(j == 0)){
+             j = -1;
 
             }
           }
-          else data[j+1] = data[j];
+          else{
+             data[j+1] = data[j];
+             data[j] = saver;
+          }
         }
+        i++;
       }
 
     }
