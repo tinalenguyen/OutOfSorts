@@ -4,6 +4,18 @@ public class SortsTester{
 
     public static void main(String[] args){
   //bubblesort tests from images in class notes
+
+      int[] ttest1 = new int[]{2,3,4,5,1};
+      Sorts.selectionSort(ttest1);
+      System.out.println("selection1: " + Arrays.toString(ttest1));
+
+      int[] ttest2 = new int[]{5, 1, 12, -5, 16};
+      Sorts.selectionSort(ttest2);
+      System.out.println(Arrays.toString(ttest2) );
+
+
+      System.out.println("\nBubbleSort Tests\n");
+
       int[] test1 = new int[]{2,3,4,5,1};
       Sorts.bubbleSort(test1);
       System.out.println(Arrays.toString(test1));
@@ -27,20 +39,20 @@ public class SortsTester{
 
       //specified seed can be used to reproduce sequences
       int[] test5 = new int[7];
+      int[] ttest5 = new int[7];
       Random rando = new Random();
-      rando = new Random(201);//seed of 100 is stored.
+      rando = new Random(207);//seed of 100 is stored.
       for(int i =  0; i < 7; i++ ){
         test5[i] = (rando.nextInt() % 100);
+        ttest5[i] = (rando.nextInt() % 100);
       }
       Sorts.bubbleSort(test5);
       System.out.println("Specified seed test: " + Arrays.toString(test5));
 
-      int[] test6 = new int[]{0,0,5,1};
-      Sorts.bubbleSort(test6);
-      System.out.println(Arrays.toString(test6));
+      Sorts.selectionSort(ttest5);
+      System.out.println("selection sort: " + Arrays.toString(ttest5) );
 
-      int[] test7 = new int[]{};
-      Sorts.bubbleSort(test7);
-      System.out.println(Arrays.toString(test7));
+
+
   }
 }
