@@ -37,23 +37,20 @@ public class Sorts{
     int saver = 0;
 
     for (int i = 1 ; i < data.length; i++ ){
-
-      if (data[i] < data[i-1]) {
         saver = data[i];
       for (int j = 0 ; j < i ; j++){
 
           if (saver < data[j]){
-            for (int g = i-1 ; g >=j ; g--)
+            for (int g = i-1 ; g > j ; g--){
             data[g+1] = data[g];
             }
             data[j] = saver;
-            j = i +1;
+            break;
           }
 
         }
 
-      }
 
     }
-
+  }
 }
