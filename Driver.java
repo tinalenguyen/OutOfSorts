@@ -7,7 +7,6 @@ public class Driver{
       System.out.println("supported STYLE: random,equal,sorted,reversed");
     }else{
 
-
       int[] randData = new int[Integer.parseInt(args[0])];
 
        //overhead: 1 random array generation.
