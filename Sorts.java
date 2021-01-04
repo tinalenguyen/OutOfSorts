@@ -41,11 +41,11 @@ public class Sorts{
       for (int j = 0 ; j < i ; j++){
 
           if (saver < data[j]){
-            for (int g = i-1 ; g > j ; g--){
+            for (int g = i-1 ; g >= j ; g--){
             data[g+1] = data[g];
             }
             data[j] = saver;
-            break;
+            j = i;
           }
 
         }
